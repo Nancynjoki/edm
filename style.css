@@ -1203,8 +1203,6 @@ table tr:hover td {
     /* EDUCATION IMAGE SIZING */
   /* EDUCATION — SAME STYLE AS THE HOME PAGE IMAGE/TEXT */
 
-@media (max-width: 768px) {
-
     .container3,
     .container4 {
         width: 92%;
@@ -1299,7 +1297,6 @@ table tr:hover td {
     .edcont h2 {
         font-size: 12px;
     }
-}
 
 
     /* CONSULTANCIES — KEEP THE TABLE */
