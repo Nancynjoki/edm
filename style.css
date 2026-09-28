@@ -1201,21 +1201,90 @@ table tr:hover td {
 
    
     /* EDUCATION IMAGE SIZING */
-    .card5,
-    .card6 {
-        width: 100%;
-        padding: 15px;
-        gap: 14px;
+  /* EDUCATION — SAME STYLE AS THE HOME PAGE IMAGE/TEXT */
+
+@media (max-width: 768px) {
+
+    .container3,
+    .container4 {
+        width: 92%;
+        margin: 30px auto 45px;
     }
 
+    /* Education: image LEFT, text RIGHT */
+    .card5 {
+        display: grid;
+        grid-template-columns: 42% minmax(0, 58%);
+        gap: 14px;
+        padding: 18px;
+        align-items: start;
+    }
+
+    /* Specialization: text LEFT, image RIGHT */
+    .card6 {
+        display: grid;
+        grid-template-columns: 58% 42%;
+        gap: 14px;
+        padding: 18px;
+        align-items: start;
+    }
+
+    /*
+       IMPORTANT:
+       Don't use height: 100% here.
+       Give the images their own portrait proportions,
+       just like the first image on the index page.
+    */
     .img5,
     .img6 {
         width: 100%;
-        height: 100%;
+        height: auto;
+        aspect-ratio: 3 / 4;
         object-fit: cover;
+        border-radius: 9px;
+        align-self: start;
     }
 
-    /* PhD defence image underneath */
+    /* Education text */
+    .educa > h1,
+    .spc {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        padding-bottom: 7px;
+    }
+
+    .educ,
+    .specia {
+        margin-bottom: 13px;
+        padding-bottom: 11px;
+    }
+
+    .educ h1,
+    .specia h1 {
+        font-size: 12px;
+        line-height: 1.35;
+        margin-bottom: 4px;
+    }
+
+    .educ h2,
+    .specia h2 {
+        font-size: 10.5px;
+        line-height: 1.35;
+        margin-bottom: 5px;
+    }
+
+    .educ p {
+        font-size: 10.5px;
+        line-height: 1.45;
+    }
+
+    /* The large PhD defence image underneath */
+    .edcont {
+        width: 92%;
+        margin: 30px auto 60px;
+    }
+
     .container5 img {
         width: 100%;
         height: auto;
@@ -1223,18 +1292,14 @@ table tr:hover td {
         object-fit: contain;
     }
 
-    .edcont {
-        width: 92%;
-        margin: 30px auto 60px;
-    }
-
     .edcont h1 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .edcont h2 {
-        font-size: 13px;
+        font-size: 12px;
     }
+}
 
 
     /* CONSULTANCIES — KEEP THE TABLE */
