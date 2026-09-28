@@ -1209,33 +1209,9 @@ table tr:hover td {
         margin: 30px auto 45px;
     }
 
-    /* Education: image LEFT, text RIGHT */
+    /* EDUCATION
+       Image LEFT — text RIGHT */
     .card5 {
-        display: grid;
-        grid-template-columns: 42% minmax(0, 58%);
-        gap: 14px;
-        padding: 18px;
-        align-items: start;
-    }
-
-    /* Specialization: text LEFT, image RIGHT */
-
-    /*
-       IMPORTANT:
-       Don't use height: 100% here.
-       Give the images their own portrait proportions,
-       just like the first image on the index page.
-    */
-    .img5,
-    {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 4;
-        object-fit: cover;
-        border-radius: 9px;
-        align-self: start;
-    }
- .card6 {
         display: grid;
         grid-template-columns: 38% minmax(0, 62%);
         gap: 14px;
@@ -1243,22 +1219,93 @@ table tr:hover td {
         align-items: start;
     }
 
-    .img6 {
+    /* SPECIALIZATION
+       Text LEFT — image RIGHT */
+    .card6 {
+        display: grid;
+        grid-template-columns: 62% 38%;
+        gap: 14px;
+        padding: 18px;
+        align-items: start;
+    }
+
+    /* BOTH EDUCATION IMAGES */
+    .card5 .img5,
+    .card6 .img6 {
         width: 100%;
-        height: auto;
-        min-height: 0;
-        max-height: none;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
 
         aspect-ratio: 3 / 4;
         object-fit: cover;
 
         border-radius: 9px;
-        align-self: start;
         display: block;
+        align-self: start;
     }
 
-    .card6 .spec {
-        min-width: 0;
+    /* Education headings */
+    .educa > h1,
+    .spc {
+        font-size: 21px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        padding-bottom: 7px;
+    }
+
+    .educ,
+    .specia {
+        margin-bottom: 13px;
+        padding-bottom: 11px;
+    }
+
+    .educ h1,
+    .specia h1 {
+        font-size: 12px;
+        line-height: 1.35;
+        margin-bottom: 4px;
+    }
+
+    .educ h2,
+    .specia h2 {
+        font-size: 10.5px;
+        line-height: 1.35;
+        margin-bottom: 5px;
+    }
+
+    .educ p {
+        font-size: 10.5px;
+        line-height: 1.45;
+    }
+
+
+
+/* =========================================
+   SMALL PHONES
+   KEEP IMAGE AT 38%
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .card5 {
+        grid-template-columns: 38% minmax(0, 62%);
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .card6 {
+        grid-template-columns: 62% 38%;
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .card5 .img5,
+    .card6 .img6 {
+        width: 100%;
+        height: auto !important;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
     }
 }
     /* Education text */
