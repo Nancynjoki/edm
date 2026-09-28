@@ -1230,7 +1230,17 @@ table tr:hover td {
     }
 
     /* BOTH EDUCATION IMAGES */
-    .card5 .img5,
+    .card5 .img5{
+       width: 100%;
+        height: 180px !important;
+        min-height: 0 !important;
+        max-height: 180px !important;
+        aspect-ratio: auto;
+        object-fit: cover;
+        border-radius: 9px;
+        display: block;
+        align-self: start; 
+    }
     .card6 .img6 {
         width: 100%;
         height: 180px !important;
@@ -1284,29 +1294,7 @@ table tr:hover td {
    KEEP IMAGE AT 38%
    ========================================= */
 
-@media (max-width: 380px) {
 
-    .card5 {
-        grid-template-columns: 38% minmax(0, 62%);
-        gap: 10px;
-        padding: 13px;
-    }
-
-    .card6 {
-        grid-template-columns: 62% 38%;
-        gap: 10px;
-        padding: 13px;
-    }
-
-    .card5 .img5,
-    .card6 .img6 {
-        width: 100%;
-        height: 150px !important;
-        max-height: 150px !important;
-        aspect-ratio: auto;
-        object-fit: cover;
-    }
-}
     /* Education text */
     .educa > h1,
     .spc {
