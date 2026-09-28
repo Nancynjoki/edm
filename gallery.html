@@ -128,11 +128,36 @@
 </section>
 
 <script>
-  const toggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+const toggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+const aboutDropdown = document.querySelector(".dropdown");
+const aboutBtn = document.querySelector(".aboutdropbtn");
+
+// Open/close main mobile menu when hamburger icon is clicked
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Toggle ABOUT dropdown menu on mobile tap
+if (aboutBtn) {
+  aboutBtn.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // Prevents jump to top of page
+      aboutDropdown.classList.toggle("active");
+    }
   });
+}
+
+// Select all links EXCEPT the main ABOUT toggle button
+const navItems = document.querySelectorAll("#nav-links a:not(.aboutdropbtn)");
+
+// Close mobile navigation when a page link is clicked
+navItems.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    aboutDropdown.classList.remove("active");
+  });
+});
 
   document.querySelectorAll(".slider").forEach((slider) => {
     let index = 0;
