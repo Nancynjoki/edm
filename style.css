@@ -1219,13 +1219,6 @@ table tr:hover td {
     }
 
     /* Specialization: text LEFT, image RIGHT */
-    .card6 {
-        display: grid;
-        grid-template-columns: 58% 42%;
-        gap: 14px;
-        padding: 18px;
-        align-items: start;
-    }
 
     /*
        IMPORTANT:
@@ -1234,7 +1227,7 @@ table tr:hover td {
        just like the first image on the index page.
     */
     .img5,
-    .img6 {
+    {
         width: 100%;
         height: auto;
         aspect-ratio: 3 / 4;
@@ -1242,7 +1235,32 @@ table tr:hover td {
         border-radius: 9px;
         align-self: start;
     }
+ .card6 {
+        display: grid;
+        grid-template-columns: 38% minmax(0, 62%);
+        gap: 14px;
+        padding: 18px;
+        align-items: start;
+    }
 
+    .img6 {
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+
+        border-radius: 9px;
+        align-self: start;
+        display: block;
+    }
+
+    .card6 .spec {
+        min-width: 0;
+    }
+}
     /* Education text */
     .educa > h1,
     .spc {
