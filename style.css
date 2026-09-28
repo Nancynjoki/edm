@@ -931,4 +931,26 @@ table tr:hover td {
     .slides, .slides img {
         height: 300px;
     }
+   .dropdown .aboutdrop {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        display: none; /* Hidden by default on mobile */
+        padding: 5px 0;
+    }
+
+    /* Display sub-items when active class is toggled */
+    .dropdown.active .aboutdrop {
+        display: flex;
+    }
+
+    .aboutdrop li a {
+        color: var(--navy-primary);
+        padding: 8px 0;
+        font-size: 12px;
+    }
 }
