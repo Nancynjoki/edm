@@ -1226,7 +1226,7 @@ table tr:hover td {
        Give the images their own portrait proportions,
        just like the first image on the index page.
     */
-    .img5,
+    .img5
     {
         width: 100%;
         height: auto;
@@ -1235,13 +1235,13 @@ table tr:hover td {
         border-radius: 9px;
         align-self: start;
     }
- .card6 {
-        display: grid;
-        grid-template-columns: 38% minmax(0, 62%);
-        gap: 14px;
-        padding: 18px;
-        align-items: start;
-    }
+.card6 {
+    display: grid;
+    grid-template-columns: minmax(0, 62%) 38%;
+    gap: 14px;
+    padding: 18px;
+    align-items: start;
+}
 
     .img6 {
         width: 100%;
@@ -1294,7 +1294,19 @@ table tr:hover td {
         font-size: 10.5px;
         line-height: 1.45;
     }
+@media (max-width: 380px){
+   .card5 {
+    grid-template-columns: 38% minmax(0, 62%);
+    gap: 10px;
+    padding: 13px;
+}
 
+.card6 {
+    grid-template-columns: minmax(0, 62%) 38%;
+    gap: 10px;
+    padding: 13px;
+}
+}
     /* The large PhD defence image underneath */
     .edcont {
         width: 92%;
